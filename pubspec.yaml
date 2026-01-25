@@ -1,0 +1,56 @@
+name: myqrcode
+description: "A new Flutter project."
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  mobile_scanner: ^7.1.4
+  circle_nav_bar: ^2.2.0
+  pretty_qr_code: ^3.5.0
+  image:
+  intl: 
+  get: ^4.7.3
+  flutter_screenutil: ^5.9.3
+  google_fonts: ^7.0.2
+  flutter_bounceable: ^1.2.0
+  widgets_to_image: ^2.0.1
+  flutter_native_contact_picker_plus: ^1.3.1
+  permission_handler: ^11.3.1
+  image_picker: ^1.2.1
+  gallery_saver_plus: ^3.2.9
+  url_launcher: ^6.3.2
+  share_plus: ^12.0.1
+  lottie: ^3.3.2
+  sqflite: 
+  shared_preferences: ^2.5.4
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons:
+  flutter_lints: ^6.0.0
+
+  
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/image/logo.png"
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+   - assets/image/
+   - assets/lottie/
+
