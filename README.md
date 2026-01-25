@@ -71,6 +71,6 @@ Feel free to fork this project and submit a pull request.
 If you like this project, don't forget to give it a ⭐ on GitHub!
 
 ## Download
-![](https://drive.google.com/file/d/1hkWdtiN5Fo4_OcNUXhBOtQAnGgxrriUn/view?usp=drive_link)
+[Download APK](https://drive.google.com/file/d/1hkWdtiN5Fo4_OcNUXhBOtQAnGgxrriUn/view?usp=drive_link)
 
 
