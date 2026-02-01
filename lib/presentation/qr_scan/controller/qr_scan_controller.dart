@@ -6,7 +6,6 @@ import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:myqrcode/core/enum/barcode_type.dart';
 import 'package:myqrcode/core/widget/qr_show_widget.dart';
 import 'package:myqrcode/service/dependency_service.dart';
-
 import '../../../core/color/pallet_color.dart';
 import '../../../core/enum/app_style.dart';
 import '../../../core/model/recent_model.dart';
@@ -106,4 +105,5 @@ class QrScanController extends GetxController {
     await dep.db.addRecent(data);
     return data;
   }
+
 }

@@ -9,6 +9,7 @@ import 'package:myqrcode/core/enum/barcode_type.dart';
 import 'package:myqrcode/core/model/recent_model.dart';
 import 'package:myqrcode/core/widget/qr_show_widget.dart';
 import 'package:myqrcode/service/dependency_service.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class QrCreateController extends GetxController {
   final menuCreateQr = [
@@ -109,5 +110,12 @@ class QrCreateController extends GetxController {
     );
     await dep.db.addRecent(data);
     return data;
+  }
+
+  Future contackEmail() async {
+    final subject = Uri.encodeComponent('Collaborate');
+    final body = Uri.encodeComponent('Hello,\n\nI would like to collaborate with you.');
+    final Uri email = Uri.parse('mailto:ryanhappyjalay2461@gmail.com?subject=$subject&body=$body');
+    if (!await launchUrl(email)) {}
   }
 }

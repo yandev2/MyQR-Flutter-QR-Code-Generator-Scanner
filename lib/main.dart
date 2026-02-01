@@ -28,63 +28,49 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
-        return SafeArea(
-          child: GetMaterialApp(
-            debugShowCheckedModeBanner: false,
-            getPages: RouteApp.route,
-            initialBinding: SplashBinding(),
-            initialRoute: RouteName.splashscreen,
-            home: child,
-            theme: ThemeData(
-              scaffoldBackgroundColor: Colors.transparent,
-              useMaterial3: true,
-              primaryColor: Color.fromARGB(255, 68, 35, 253),
-              focusColor: Color.fromARGB(255, 39, 206, 33),
-              hoverColor: Colors.amber,
-              canvasColor: Colors.red,
-              cardColor: Color(0xFFF5F7FF),
-              // ignore: deprecated_member_use
-              shadowColor: Colors.black.withOpacity(0.04),
-              appBarTheme: AppBarTheme(
-                backgroundColor: Colors.transparent,
-                scrolledUnderElevation: 0,
-                shadowColor: Colors.transparent,
+        return GetMaterialApp(
+          debugShowCheckedModeBanner: false,
+          getPages: RouteApp.route,
+          initialBinding: SplashBinding(),
+          initialRoute: RouteName.splashscreen,
+          home: child,
+          theme: ThemeData(
+            scaffoldBackgroundColor: Colors.transparent,
+            useMaterial3: true,
+            primaryColor: Color.fromARGB(255, 68, 35, 253),
+            focusColor: Color.fromARGB(255, 39, 206, 33),
+            hoverColor: Colors.amber,
+            canvasColor: Colors.red,
+            cardColor: Color(0xFFF5F7FF),
+            // ignore: deprecated_member_use
+            shadowColor: Colors.black.withOpacity(0.04),
+            appBarTheme: AppBarTheme(
+              backgroundColor: Colors.transparent,
+              scrolledUnderElevation: 0,
+              shadowColor: Colors.transparent,
+            ),
+            textTheme: TextTheme(
+              titleLarge: TextStyle(
+                color: Colors.black,
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                fontVariations: <FontVariation>[FontVariation('wght', 900.0)],
               ),
-              textTheme: TextTheme(
-                titleLarge: TextStyle(
-                  color: Colors.black,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  fontVariations: <FontVariation>[FontVariation('wght', 900.0)],
-                ),
-                titleMedium: TextStyle(
-                  color: Colors.black,
-                  fontSize: 13,
-                  fontWeight: FontWeight.bold,
-                  fontVariations: <FontVariation>[FontVariation('wght', 900.0)],
-                ),
-                titleSmall: TextStyle(
-                  color: Colors.black,
-                  fontSize: 10,
-                  fontWeight: FontWeight.bold,
-                  fontVariations: <FontVariation>[FontVariation('wght', 900.0)],
-                ),
-                bodyLarge: TextStyle(
-                  color: Colors.black,
-                  fontSize: 15,
-                  fontWeight: FontWeight.w400,
-                ),
-                bodyMedium: TextStyle(
-                  color: Colors.black,
-                  fontSize: 13,
-                  fontWeight: FontWeight.w400,
-                ),
-                bodySmall: TextStyle(
-                  color: Colors.black,
-                  fontSize: 10,
-                  fontWeight: FontWeight.w300,
-                ),
+              titleMedium: TextStyle(
+                color: Colors.black,
+                fontSize: 13,
+                fontWeight: FontWeight.bold,
+                fontVariations: <FontVariation>[FontVariation('wght', 900.0)],
               ),
+              titleSmall: TextStyle(
+                color: Colors.black,
+                fontSize: 10,
+                fontWeight: FontWeight.bold,
+                fontVariations: <FontVariation>[FontVariation('wght', 900.0)],
+              ),
+              bodyLarge: TextStyle(color: Colors.black, fontSize: 15, fontWeight: FontWeight.w400),
+              bodyMedium: TextStyle(color: Colors.black, fontSize: 13, fontWeight: FontWeight.w400),
+              bodySmall: TextStyle(color: Colors.black, fontSize: 10, fontWeight: FontWeight.w300),
             ),
           ),
         );

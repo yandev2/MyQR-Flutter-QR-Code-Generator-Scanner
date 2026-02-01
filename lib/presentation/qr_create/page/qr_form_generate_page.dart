@@ -23,6 +23,7 @@ class QrFormGeneratePage extends StatelessWidget {
     final controller = Get.find<QrCreateController>();
     return Scaffold(
       body: BgApp(
+        padding: EdgeInsets.only(top: size(10)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

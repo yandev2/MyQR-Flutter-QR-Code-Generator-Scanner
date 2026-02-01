@@ -138,7 +138,7 @@ void showGWDialog({
                 message,
                 textScaler: TextScaler.linear(scale()),
                 style: TextStyle(
-                  fontSize: size(14),
+                  fontSize: size(12),
                   height: 1.5,
                   color: dark ? Colors.white70 : Colors.black87,
                 ),

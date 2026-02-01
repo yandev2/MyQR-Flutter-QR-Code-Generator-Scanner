@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:myqrcode/presentation/qr_create/controller/qr_create_controller.dart';
+import 'package:myqrcode/presentation/qr_create/widget/build_collaborate.dart';
 import 'package:myqrcode/routes/route_app/route_name.dart';
-import '../../../core/color/pallet_color.dart';
 import '../../../core/design/responsif_design.dart';
-import '../../../core/enum/app_style.dart';
 import '../widget/build_card_feature.dart';
+import '../widget/build_header.dart';
 
 class QrCreatePage extends StatelessWidget {
   const QrCreatePage({super.key});
@@ -15,67 +15,13 @@ class QrCreatePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.find<QrCreateController>();
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        toolbarHeight: size(50),
-        flexibleSpace: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10).w,
-          child: Row(
-            children: [
-              Text.rich(
-                textScaler: TextScaler.linear(scale()),
-                TextSpan(
-                  text: 'My',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 17,
-                    fontWeight: FontWeight.w900,
-                    fontVariations: <FontVariation>[FontVariation('wght', 900.0)],
-                  ),
-                  children: [
-                    TextSpan(
-                      text: 'QR',
-                      style: TextStyle(color: Theme.of(context).primaryColor),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10).w,
         child: CustomScrollView(
           physics: BouncingScrollPhysics(),
           slivers: [
-            SliverAppBar(
-              toolbarHeight: size(100),
-              flexibleSpace: Text.rich(
-                textScaler: TextScaler.linear(scale()),
-                TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'Choose\n',
-                      style: TextTheme.of(context).titleLarge?.copyWith(
-                        color: PalletColor().palletApp(AppStyle.primary),
-                        fontSize: 20,
-                      ),
-                    ),
-                    TextSpan(
-                      text: 'Generate you Qrcode\n',
-                      style: TextTheme.of(context).titleLarge?.copyWith(fontSize: 30),
-                    ),
-                    TextSpan(
-                      text: '  with AI mobile scanner technology',
-                      style: TextTheme.of(context).bodySmall?.copyWith(height: 0.8),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-
+            buildHeader(context),
+            buildCollaborate(controller, context),
             SliverGrid.builder(
               itemCount: controller.menuCreateQr.getRange(0, 4).length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -122,6 +68,14 @@ class QrCreatePage extends StatelessWidget {
                   Get.toNamed(RouteName.createqr);
                 });
               },
+            ),
+
+            SliverList.list(
+              children: [
+                SizedBox(height: size(20)),
+                Center(child: Text('MY QR  V.1 2026 BY JUNDEV')),
+                SizedBox(height: size(100)),
+              ],
             ),
           ],
         ),
